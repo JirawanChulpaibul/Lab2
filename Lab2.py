@@ -8,7 +8,7 @@ def find_min_max(num):
         elif num[i] > max :
             max = num[i]
     min_max = [min,max]
-    print(min_max)
+    print("The min and max are " ,min_max)
     return min_max
 
 def get_user_input():
@@ -28,13 +28,13 @@ def calc_average(num):
     for i in range(1,length):
         total = num[i] + total
     average = total/length
-    print("The average is " + average)
+    print("The average is ",average)
 def main():
     print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
     display_main_menu()
     num_split = get_user_input() #name of the variable has to be the same as the return variable of the function called
-    calc_average(num_split)
     find_min_max(num_split)
+    calc_average(num_split)
 
 if __name__ == "__main__":
     main()
