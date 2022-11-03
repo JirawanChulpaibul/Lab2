@@ -1,3 +1,15 @@
+import statistics
+
+def calc_median_temperature(num):
+    median = statistics.median(num)
+    print("The median temperature is : ",median)
+
+def sort_temperture(num):
+    ascending = sorted(num) #sort number by ascending
+    descending = num
+    descending.sort(reverse=True)
+    print("List of temperature in ascending order ", ascending)
+    print("List of temperature in descending oder ",descending)
 def find_min_max(num):
     length = len(num) #get the length of the list of floats
     min = num[0]
@@ -35,6 +47,8 @@ def main():
     num_split = get_user_input() #name of the variable has to be the same as the return variable of the function called
     find_min_max(num_split)
     calc_average(num_split)
+    sort_temperture(num_split)
+    calc_median_temperature(num_split)
 
 if __name__ == "__main__":
     main()
